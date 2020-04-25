@@ -70,6 +70,10 @@ public class GameManager : MonoBehaviour
     }
 
     private void Update() {
+        if (Input.GetKey("escape")) {
+            Application.Quit();
+        }
+
         if (playersTurn || enemiesMoving || doingSetup) {
             return;
         }
